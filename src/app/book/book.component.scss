@@ -1,0 +1,20 @@
+.books {
+  .book {
+    padding-top: 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    &:hover {
+      background: linear-gradient(to right top, #e9e8e666, #f3e6d666);
+    }
+    span {
+      display: block;
+    }
+
+    .actions {
+      cursor: pointer;
+      &:hover {
+        color: coral;
+      }
+    }
+  }
+}

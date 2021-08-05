@@ -1,0 +1,15 @@
+<div class="container books">
+  <div class="row book">
+    <div class="col"><p>{{ book.name }}</p></div>
+    <div class="col"><p>{{ book.author | titlecase }}</p></div>
+    <div class="col"><p>{{ book.date | date: 'yyyy' }}</p></div>
+    <div class="col">
+      <p><span *ngFor="let g of book.genre">{{ g.name | titlecase }}</span></p>
+    </div>
+    <div class="col"><p>{{ book.description }}</p></div>
+    <div class="col">
+      <p class="actions">Редактировать</p>
+      <p class="actions" (click)="removePost()">Удалить</p>
+    </div>
+  </div>
+</div>

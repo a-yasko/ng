@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="col-5">
+    <h3 class="mt-5 mb-4">Добавить книгу</h3>
+    <input
+      type="text" 
+      class="form-control mb-3" 
+      placeholder="Введите название книги"
+      [(ngModel)]="book.name"
+    >
+    <input 
+      type="text" 
+      class="form-control mb-3" 
+      placeholder="Автор книги"
+      [(ngModel)]="book.author"
+    >
+    <input 
+      type="text"
+      class="form-control mb-3" 
+      placeholder="Год написания"
+      maxlength="4"
+      [(ngModel)]="book.date"
+    >
+    <select 
+    class="form-select mb-3"
+    [(ngModel)]="book.genreId">
+      <option
+        *ngFor="let g of genresArr | async" 
+        value="{{g.id}}"
+      >{{g.name | titlecase}}</option>
+    </select>
+    <input 
+      type="text" 
+      class="form-control mb-3" 
+      placeholder="Краткое описание"
+      [(ngModel)]="book.description"
+    >
+    <button class="btn btn-success" (click)="submit(book)">Добавить пост</button>
+  </div>
+</div>
