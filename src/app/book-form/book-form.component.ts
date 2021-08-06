@@ -18,7 +18,7 @@ export class BookFormComponent implements OnInit {
     private bookService: BookService
   ) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
   book: Book = {

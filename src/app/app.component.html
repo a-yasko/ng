@@ -9,7 +9,9 @@
   ></app-book>
 </div>
 <ng-template #loadingBlock>
-  <p>Loading...</p>
+  <div class="container mt-5">
+    <p>Loading...</p>
+  </div>
 </ng-template>
 <app-book-form
   (onAdd)="updateBooks($event)"

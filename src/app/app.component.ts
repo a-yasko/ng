@@ -32,7 +32,7 @@ export class AppComponent implements OnInit {
   constructor(
     private genreService: GenreService,
     private bookService: BookService
-    ) {}
+  ) {}
 
   ngOnInit() {
     this.fetchBooks();
@@ -41,14 +41,12 @@ export class AppComponent implements OnInit {
   fetchBooks() {
     this.loading = true;
     this.bookService.getBooks(1)
-      .pipe(delay(300))
       .subscribe(result => {
         this.books = result;
         this.loading = false;
       });
 
     this.genreService.getGenres()
-      .pipe(delay(300))
       .subscribe(result => {
         this.genres = result;
         for (let book of this.books) {
